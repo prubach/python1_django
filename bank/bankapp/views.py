@@ -14,5 +14,5 @@ def helloTemplate(request):
     return render(request, 'bankapp/test.html', {'hello_text': msg})
 
 def show_customer(request, cust_id):
-    customer = get_object_or_404(Customer, cust_id)
+    customer = get_object_or_404(Customer, pk=cust_id)
     return render(request, 'bankapp/cust.html', {'customer' : customer})
